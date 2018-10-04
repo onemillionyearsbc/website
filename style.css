@@ -1,0 +1,217 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #325662;
+    padding: 15px;
+}
+
+.social-header {
+    height: 95vh;
+    background: linear-gradient(rgba(255, 255, 255, 0.85),
+    rgba(255, 255, 255, 0.44)),
+    url(blockchain3.jpeg);
+
+    background-size: cover;
+    background-position: top;
+    position: relative;
+
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+}
+
+.social-logo-box {
+    position: absolute;
+    top: 0px;
+    left: 20px;
+}
+
+.social-logo {
+    height: 125px;
+}
+
+.social-text-box {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.social-heading-primary {
+    /*    color:#fff;*/
+    text-transform: uppercase;
+}
+
+.social-heading-primary-main {
+    
+    display: block;
+    font-size: 60px;
+    font-weight: 600;
+    letter-spacing: 10px;
+    line-height: 1.2;
+
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+
+}
+
+.social-heading-primary-sub {
+    display: block;
+
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 5px;
+    padding-top: 20px;
+    
+    animation-name: moveInRight;
+    animation-duration: 1s;
+
+}
+
+.title-underline {
+    display: block;
+    position: relative;
+/*    left: 30%;*/
+    background: #698B91;
+    width: 100px;
+    height: 4px;
+    margin: 10px auto;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    text-align: center;
+}
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+
+    80% {
+        transform: translateX(-10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    80% {
+        transform: translateX(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@media screen and (max-width: 476px) {
+   
+    .social-text-box {
+        top: 50%;
+    }
+    .social-heading-primary-main {
+    
+        font-size: 40px;
+    }
+    .social-heading-primary-sub {
+        padding-top: 20px;
+        padding-bottom: 30px;
+        font-size: 15px;
+    }
+    .social-logo-box {
+        top: 0px;
+        left: 10px;
+    }
+
+    
+}
+
+
+.btn:link,
+.btn:visited {
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 5px 50px;
+    display: inline-block;
+    border-radius: 100px;
+    border: 2px solid gray;
+    transition: all .2s;
+    position: relative;
+}
+
+.btn-animated {
+    animation: moveInBottom .5s ease-out .75s;
+    animation-fill-mode: backwards;
+    
+}
+
+.btn-white {
+    background-color: #fff;
+    color: #777;
+}
+
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    
+}
+
+.btn::after{
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+}
+
+.btn-white::after{
+    background-color: white;
+   
+}
+
+
+.btn:hover::after{
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}

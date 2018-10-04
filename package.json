@@ -1,0 +1,17 @@
+{
+  "name": "onemillionyearsbc",
+  "version": "1.0.0",
+  "description": "company website",
+  "main": "fontawesome-all.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "author": "Mike Richardson",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.9.2"
+  },
+  "dependencies": {
+    "sass": "^1.13.0"
+  }
+}
